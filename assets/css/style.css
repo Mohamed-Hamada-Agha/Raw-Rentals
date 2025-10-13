@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  transition: opacity ease-in 0.2s;
+  background-color: white;
+  color: black;
+  direction: inherit;
+  font-family: JF Flat;
+  text-align: start;
+} 
+body[unresolved] {
+  opacity: 0;
+  display: block;
+  overflow: hidden;
+  position: relative;
+} 
+/* :not(i) {
+    font-family: JF Flat;
+} */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
