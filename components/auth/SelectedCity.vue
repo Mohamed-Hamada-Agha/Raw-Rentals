@@ -1,9 +1,9 @@
 <template>
-        <div class="mb-6 ">
-            <label for="mobile" class="block text-md font-semibold text-black">City</label>
-            <div class="relative flex items-center selectparent border border-gray-200 ">
-        <Select v-model="selectedCity" :options="cities" optionLabel="name" class="w-full p-2 bg-white" />
-    </div>
+    <div class="mb-6 ">
+      <label for="mobile" class="block text-md font-semibold text-black pb-2">City</label>
+  <div class="relative flex items-center selectparent border border-gray-200 rounded-lg">
+    <Select v-model="selectedCity" :options="cities" optionLabel="name" class="w-full p-3" />
+  </div>
     </div>
 </template>
 
@@ -19,3 +19,11 @@ const cities = ref([
     { name: 'Paris', code: 'PRS' }
 ]);
 </script>
+
+<style scoped>
+:deep(.selectparent) {
+  --p-form-field-background: #fff;
+  --p-form-field-color: #111827;          /* (اختياري) لون النص */
+  --p-content-border-color: #e5e7eb;      /* (اختياري) لون البوردر */
+}
+</style>

@@ -3,8 +3,8 @@
   <div class="min-h-[105vh] grid grid-cols-1 md:grid-cols-2 font-sans">
     <!-- فورم التسجيل -->
     <section class="order-1 flex items-center justify-center px-5 py-10 md:px-10">
-      <div class="w-full max-w-md sm:max-w-lg">
-        <h1 class="text-3xl sm:text-4xl text-center font-semibold mb-8 text-black">New Registration</h1>
+      <div class="w-full max-w-2xl ml-16">
+        <h1 class="text-3xl sm:text-4xl text-center font-semibold mb-8 mt-6 text-black">New Registration</h1>
 
         <form @submit.prevent="handleRegister" class="space-y-6">
           <!-- Username -->
@@ -24,8 +24,7 @@
 
           <!-- رقم الموبايل -->
           <div>
-            <!-- <label class="block text-sm font-semibold mb-2 text-black">Mobile Number</label> -->
-            <CountryPhoneInput v-model="phone" />
+            <CountryPhoneInput v-model="phone" class="m-0 p-0" />
             <p v-if="errors.phone" class="mt-1 text-xs text-red-600">{{ errors.phone }}</p>
           </div>
 
@@ -143,13 +142,12 @@
         <div class="text-center mt-8">
           <div class="text-md text-gray-600">
             Already have an account?
-            <NuxtLink to="/auth/login" class="underline hover:text-black">Login</NuxtLink>
+            <NuxtLink to="/auth/login" class="underline text-[#dec8ab]">Login</NuxtLink>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- الصورة: موجودة دائمًا، وتظهر تحت الصفحة على ≤767px -->
     <aside class="order-2 flex items-end justify-center md:items-center bg-transparent px-5 pb-6 md:pb-0">
       <div class="relative w-full max-w-xl">
         <img
@@ -158,18 +156,14 @@
           class="rounded-[28px] md:rounded-[2.5vw] object-cover w-full h-auto"
           loading="lazy"
         />
-
-        <!-- اللوجو أسفل يمين الصورة (بدّل src بشعارك) -->
-        <div class="absolute bottom-3 right-3 md:bottom-5 md:right-5">
-          <div class="flex items-center gap-3 bg-white/95 backdrop-blur rounded-2xl border border-gray-200 shadow-lg px-3 py-2">
+        <a class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
+     
             <img
-              src="/assets/images/logo1.svg"
+              src="/assets/images/rr.svg"
               alt="Brand logo"
-              class="h-8 w-8 rounded-md object-contain"
+              class="h-full w-full rounded-md object-contain"
             />
-            <span class="text-sm font-medium text-gray-800 hidden sm:inline">Brand</span>
-          </div>
-        </div>
+        </a>
       </div>
     </aside>
   </div>

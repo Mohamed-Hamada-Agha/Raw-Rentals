@@ -5,12 +5,15 @@ module.exports = {
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./app.vue",
-    "./error.vue"
+    "./error.vue",
   ],
   theme: {
-    extend: {},
+  extend: {
+  fontFamily: {
+    sans: ['"JF Flat"', 'system-ui', 'sans-serif'],
+    heading: ['"JF Flat"', 'system-ui', 'sans-serif'],
+  },
+}
   },
   plugins: [],
-  
-}
-
+};

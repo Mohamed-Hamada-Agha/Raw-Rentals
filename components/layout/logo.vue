@@ -12,12 +12,13 @@
         </li>
         <li class="menu-item">
           <button @click="openDialog">My Orders</button>
+          <SuccessDialog :show="showSuccessDialog" @close="showSuccessDialog = false" />
         </li>
       </ul>
       <NuxtLink to="/">
-        <div class="flex flex-col justify-center items-center p-4">
+        <div class="flex flex-col justify-center items-center   py-4">
           <img src="/assets/images/logo.svg" alt="" class=" w-[90px] h[130px] object-cover">
-          <h1 class="text-2xl font-semibold  m-4">RAW RENTALS</h1>
+          <h1 class="text-2xl font-semibold my-4">RAW RENTALS</h1>
         </div>
       </NuxtLink>
       <ul class="flex justify-end items-center flex-row flex-nowrap gap-12 ">
@@ -26,7 +27,6 @@
         <li><NuxtLink to="/contactUs" class="menu-item">Contact Us</NuxtLink></li>
     
     </ul>
-       <SuccessDialog :show="showSuccessDialog" @close="showSuccessDialog = false" />
   </div>
 </template>
 
@@ -35,6 +35,11 @@ import { ref } from 'vue'
 import Menue from '../auth/Menue.vue';
 import SuccessDialog from '../auth/SuccessDialog.vue';
 
+const showSuccessDialog = ref(false);
+
+const openDialog = () => {
+    showSuccessDialog.value = true
+}
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -48,36 +53,26 @@ const categories = ref([
 </script>
 
 <style scoped>
-/* داخل <style scoped> استخدم :deep() لو الكلاس جوّه PrimeVue */
 :deep(.menu-item) {
   position: relative;
-  display: inline-block;       /* مهم عشان الخط مايملاش السطر كله */
-  padding-bottom: 4px;         /* مسافة صغيرة تحت للنظر */
+  display: inline-block;       
+  padding-bottom: 4px;      
 }
 
-/* الخط المتحرك */
 :deep(.menu-item::after) {
   content: "";
   position: absolute;
-  left: 0;                     /* يبدأ من الشمال */
-  bottom: -2px;                /* المسافة تحت النص */
-  height: 2px;                 /* سُمك الخط */
+  left: 0;                
+  bottom: -2px;            
+  height: 2px;           
   width: 100%;
-  background: #dec8ab;    /* نفس لون النص */
+  background: #dec8ab;   
   transform: scaleX(0);
-  transform-origin: left center; /* يبدأ من الشمال */
+  transform-origin: left center; 
   transition: transform .25s ease;
 }
-
-/* عند الهوفر (وبرضه عند التركيز بالكيبورد) */
 :deep(.menu-item:hover::after),
 :deep(.p-menuitem-content:focus-within .menu-item::after) {
   transform: scaleX(1);
 }
-
-/* احترام تفضيل تقليل الحركة */
-@media (prefers-reduced-motion: reduce) {
-  :deep(.menu-item::after) { transition: none; }
-}
-
 </style>

@@ -1,6 +1,6 @@
 <template>
       <div class="">
-            <label for="mobile" class="block text-md font-semibold mb-2 text-black">Mobile Number</label>
+            <label for="mobile" class="block text-sm font-semibold  mb-2 text-black">Mobile Number</label>
             <div class="relative flex items-center rounded-lg border border-gray-400">
               <input
                 id="mobile"
@@ -14,8 +14,7 @@
             v-model="selected"
             :options="countries"
             optionLabel="name"
-            dir="rtl"
-            class="p-2 "
+            class="p-2"
           >
           <template #value="{ value }">
             <div v-if="value" class="flex items-center justify-center gap-2">
@@ -23,12 +22,12 @@
               <span class="text-sm">{{ value.dial }}</span>
             </div>
             <div v-else class="flex items-center justify-center gap-2">
-              <img src="https://flagcdn.com/w40/sa.png" class="w-6 h-4 rounded-sm border" alt="" />
-              <span class="text-black">966+</span>
+              <!-- <img src="https://flagcdn.com/w40/sa.png" class="w-6 h-4 rounded-sm border" alt="" /> -->
+              <span class="text-black">+966</span>
             </div>
           </template>
           <template #option="{ option }">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 justify-start py-1 pr-8 mr-12">
               <img :src="option.flag" class="w-6 h-4 rounded-sm border" alt="" />
               <span class="text-sm text-black">{{ option.name }}</span>
               <span class="text-xs text-black">({{ option.dial }})</span>
@@ -43,7 +42,7 @@
   import Select from 'primevue/select';
 
  const countries = [
-  { name: 'السعودية', dial: '+966', flag: 'https://flagcdn.com/w40/sa.png' },
+  { name:'السعودية',dial:'+966',flag:'https://flagcdn.com/w40/sa.png' },
   { name: 'مصر',     dial: '+20',  flag: 'https://flagcdn.com/w40/eg.png' },
 ]
 // هنا بنعرف الـ props والـ emits اللي بتسمح بالعمل مع v-model
@@ -57,4 +56,4 @@ const updatePhone = (event) => {
     phone: event.target.value
   });
 };
-  </script>
+</script>

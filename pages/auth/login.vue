@@ -1,20 +1,15 @@
 <template>
-  <!-- min-h-[105vh] = سكرول بسيط على كل الشاشات -->
   <div class="min-h-[105vh] grid grid-cols-1 md:grid-cols-2 font-sans">
-    <!-- الفورم: يظهر أولاً موبايل/تابلت/ديسكتوب -->
-    <section class="order-1 flex items-center justify-center px-5 py-10 md:px-10">
-      <div class="w-full max-w-md sm:max-w-lg">
+    <section class="order-1 flex items-center justify-center px-5 pt-32">
+      <div class="w-full max-w-2xl ml-24">
         <h1 class="text-3xl sm:text-4xl text-center font-semibold mb-8 text-black">Login</h1>
 
         <form @submit.prevent="handleLogin" class="space-y-6">
-          <!-- الموبايل -->
           <div>
-            <!-- <label class="block text-sm font-semibold mb-2 text-black">Mobile Number</label> -->
             <CountryPhoneInput v-model="formData" />
             <p v-if="errors.phone" class="mt-1 text-xs text-red-600">{{ errors.phone }}</p>
           </div>
 
-          <!-- كلمة السر -->
           <div>
             <label for="password" class="block text-sm font-semibold mb-2 text-black">Password</label>
             <div class="relative flex items-center rounded-lg border border-gray-300 focus-within:border-gray-900 transition">
@@ -24,7 +19,7 @@
                 :type="showPassword ? 'text' : 'password'"
                 placeholder="Enter password"
                 class="flex-1 w-full py-3 px-4 text-sm rounded-lg outline-none placeholder:text-gray-400"
-                autocomplete="current-password"
+                autocomplete="current-password" 
                 required
                 aria-required="true"
               />
@@ -34,7 +29,7 @@
                 class="absolute right-3 inline-flex h-9 w-9 items-center justify-center rounded-md text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-black/30"
                 :aria-label="showPassword ? 'Hide password' : 'Show password'"
               >
-                <svg v-if="!showPassword" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <svg v-if="!showPassword" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                   <circle cx="12" cy="12" r="3"/>
                 </svg>
@@ -47,14 +42,12 @@
             <p v-if="errors.password" class="mt-1 text-xs text-red-600">{{ errors.password }}</p>
           </div>
 
-          <!-- نسيت كلمة السر -->
           <div class="flex justify-end">
             <NuxtLink to="/auth/changePassword" class="text-sm text-gray-600 hover:text-black underline">
               Forgot password?
             </NuxtLink>
           </div>
 
-          <!-- زر الدخول -->
           <div class="pt-2">
             <button
               type="submit"
@@ -67,7 +60,6 @@
           </div>
         </form>
 
-        <!-- روابط إضافية -->
         <div class="text-center mt-8 space-y-2">
           <div class="text-sm sm:text-md text-gray-600">
             Don't have an account?
@@ -78,16 +70,13 @@
           </div>
         </div>
 
-        <!-- تواصل -->
-        <div class="text-center text-sm sm:text-md text-gray-600 mt-10">
+        <div class="text-center text-sm sm:text-md text-gray-600 mt-32">
           Having problems signing up?
           <NuxtLink to="/contactUs" class="underline hover:text-black">Contact Us</NuxtLink>
         </div>
       </div>
     </section>
 
-    <!-- الصورة: موجودة على كل الشاشات، وتظهر أسفل الصفحة على ≤767px -->
-    <!-- order-2 على الموبايل (أسفل)، و md:order-2 برضه على الدِسك—نفس الموضع يمين -->
     <aside class="order-2 flex items-end justify-center md:items-center bg-transparent px-5 pb-6 md:pb-0">
       <div class="relative w-full max-w-xl">
         <img
@@ -96,18 +85,14 @@
           class="rounded-[28px] md:rounded-[2.5vw] object-cover w-full h-auto"
           loading="lazy"
         />
-
-        <!-- اللوجو أسفل يمين الصورة بنفس الستايل (بدِّل src باللوجو بتاعك) -->
-        <div class="absolute bottom-3 right-3 md:bottom-5 md:right-5">
-          <div class="flex items-center gap-3 bg-white/95 backdrop-blur rounded-2xl border border-gray-200 shadow-lg px-3 py-2">
+        <a class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
+     
             <img
-              src="/assets/images/logo1.svg"
+              src="/assets/images/rr.svg"
               alt="Brand logo"
-              class="h-8 w-8 rounded-md object-contain"
+              class="h-full w-full rounded-md object-contain"
             />
-           
-          </div>
-        </div>
+        </a>
       </div>
     </aside>
   </div>
@@ -143,12 +128,12 @@ async function handleLogin () {
 
 <style scoped>
 /* لو CountryPhoneInput مبني على PrimeVue Select */
-:deep(.p-select-list) {
+/* :deep(.p-select-list) {
   margin: 0;
   padding: var(--p-select-list-padding, 4px);
   display: flex;
   flex-direction: column;
   gap: var(--p-select-list-gap, 4px);
   list-style: none;
-}
+} */
 </style>

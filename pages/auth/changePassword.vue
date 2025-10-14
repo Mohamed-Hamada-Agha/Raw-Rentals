@@ -14,10 +14,10 @@
       
 
           <!-- login button -->
-          <div class="flex justify-center">
+          <div class="flex justify-center items-center">
           <NuxtLink to=""
           type="submit"
-          class=" text-center w-[250px] p-3 text-xl font-semibold text-black bg-[#dec8ab] rounded-lg mb-6"
+          class=" text-center w-[250px] p-3 text-xl font-semibold text-black bg-[#dec8ab] rounded-lg m-12"
          >
           send
          </NuxtLink>
@@ -25,23 +25,31 @@
         </form>
 
         <!-- contact -->
-        <div class="text-center text-md text-gray-600 mt-32">
+        <div class="text-center text-md text-gray-600 mt-24">
           Having problems signing up?
           <NuxtLink to="/contactUs" class="underline hover:text-black">Contact Us</NuxtLink>
         </div>
       </div>
     </div>
 
-    <!-- image section -->
-    <div class="col-md-6 d-flex flex-column justify-center w-[650px] h-full object-cover">
-      <div class=" relative w-[95%]">
+     <aside class="order-2 flex items-end justify-center md:items-center bg-transparent px-5 pb-6 md:pb-0">
+      <div class="relative w-full max-w-xl">
         <img
-        src="/assets//images/auth-img.png"
-        alt="Clothing rack"
-        class="my-16 mr-16 rounded-[3.1vw]"
-      />
+          src="/assets/images/auth-img.png"
+          alt="Clothing rack"
+          class="rounded-[28px] md:rounded-[2.5vw] object-cover w-full h-auto"
+          loading="lazy"
+        />
+        <a class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
+     
+            <img
+              src="/assets/images/rr.svg"
+              alt="Brand logo"
+              class="h-full w-full rounded-md object-contain"
+            />
+        </a>
       </div>
-    </div>
+    </aside>
   </div>
 </template>
 

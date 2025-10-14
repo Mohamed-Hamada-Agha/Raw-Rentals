@@ -1,45 +1,32 @@
-// 1. استخدام import القياسي
-import Aura from '@primeuix/themes/aura';
+// nuxt.config.ts
+import Aura from '@primeuix/themes/aura'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  // إخراج الخصائص للمستوى الأعلى
-  typescript: {
-    shim: false,
-    strict: true,
-  },
+  typescript: { shim: false, strict: true },
 
-  vite: {
-    esbuild: {
-      jsx: 'automatic',
-    },
-  },
+  vite: { esbuild: { jsx: 'automatic' } },
 
-  // إعداد المكونات (حذف include المعيبة)
-  components: true, 
-   
+  components: true,
 
-  // الوحدات
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/icon',
     '@nuxtjs/i18n',
     '@primevue/nuxt-module',
   ],
-  // إعداد PrimeVue المُصحح
+
   primevue: {
-     components: {
-      include: ['Carousel'] 
-    },
+    components: { include: ['Carousel'] },
     options: {
       ripple: true,
       inputVariant: 'filled',
     },
-    // تصحيح هيكل الثيم
+    // 👇 هنا المكان الصحيح للثيم
     theme: {
-      preset: Aura, 
+      preset: Aura,
       options: {
         prefix: 'p',
         darkModeSelector: 'system',
@@ -47,19 +34,25 @@ export default defineNuxtConfig({
       },
     },
   },
-  //   i18n: {
-  //   locales: [
-  //     { code: 'ar', iso: 'ar-SA', file: 'ar.json', dir: 'rtl' },
-  //     { code: 'en', iso: 'en-US', file: 'en.json', dir: 'ltr' },
-  //   ],
-  //   defaultLocale: 'ar',
-  //   strategy: 'prefix_except_default',
-  //   langDir: 'locales/',
-  // },
-  // CSS
+
+  // Tailwind inline config (تمام)
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          fontFamily: {
+            // حط الخط أولًا وباقي الاحتياطي بعده + اقتباس الاسم
+            sans: ['"JF Flat"', 'Cairo', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    },
+  },
+
   css: [
-    'flag-icons/css/flag-icons.css',
-    '~/node_modules/primeicons/primeicons.css',
-    '~/assets/css/style.css',
+    'primeicons/primeicons.css',   // أيقونات Prime
+    '@/assets/css/tailwind.css',   // ملفك اللي فيه @tailwind base/components/utilities
+    '~/assets/css/fonts.css',      // @font-face لـ JF Flat
+    '~/assets/css/style.css',      // ستايلاتك (اتأكد ما تغيّرش ألوان Prime عموميًا)
   ],
-});
+})

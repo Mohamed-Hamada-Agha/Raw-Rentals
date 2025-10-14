@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-[#f2f2f2]">
+  <div class="w-full bg-slate-100">
     <h1 class="text-2xl p-8 text-center ">contact Us</h1>
   <form class="bg-white grid grid-cols-2 gap-6 rounded-lg mx-28 border mb-8 border-[#d2b895] p-6">
     <div class="flex flex-col gap-4">
@@ -35,7 +35,7 @@
     </div>
   </form>
 
-     <div class="flex justify-center items-center gap-4  p-4">
+     <div class="flex justify-center items-center gap-4 p-4">
         <WhatsappButton  class="p-3"/>
       <button @click="navigateTo('/contactUs')" class="p-3 bg-[#dec8ab] font-semibold w-[300px] rounded-lg">Send</button>
      </div>
