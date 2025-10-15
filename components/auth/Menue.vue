@@ -2,7 +2,7 @@
   <div class="relative inline-block">
     <button
       type="button"
-      class="menu-item flex items-center gap-2  font-medium "
+      class="menu-item flex items-center gap-2"
       @click="toggle"
       aria-haspopup="menu"
       aria-controls="categs_menu_list"

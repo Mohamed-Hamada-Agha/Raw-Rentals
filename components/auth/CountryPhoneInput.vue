@@ -1,14 +1,14 @@
 <template>
       <div class="">
             <label for="mobile" class="block text-sm font-semibold  mb-2 text-black">Mobile Number</label>
-            <div class="relative flex items-center rounded-lg border border-gray-400">
+            <div class="relative flex items-center rounded-lg border border-gray-300">
               <input
                 id="mobile"
                 v-model="props.modelValue.phone"
                 @input="updatePhone"
                 type="tel"
                 placeholder="Enter mobile number"
-                class="flex-1 w-full py-3 px-4 text-sm rounded-xl outline-none transition-colors placeholder:text-gray-400"
+                class="flex-1 w-full py-3 px-4 text-sm rounded-xl outline-none placeholder:text-gray-400"
               />
           <Select
             v-model="selected"

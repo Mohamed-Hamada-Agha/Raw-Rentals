@@ -21,9 +21,9 @@ const cities = ref([
 </script>
 
 <style scoped>
-:deep(.selectparent) {
-  --p-form-field-background: #fff;
-  --p-form-field-color: #111827;          /* (اختياري) لون النص */
-  --p-content-border-color: #e5e7eb;      /* (اختياري) لون البوردر */
-}
+  :deep(.selectparent) {
+    --p-form-field-background: #fff;
+    --p-form-field-color: #111827;  
+    --p-content-border-color: #e5e7eb;     
+  }
 </style>

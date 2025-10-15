@@ -43,7 +43,7 @@
           </div>
 
           <div class="flex justify-end">
-            <NuxtLink to="/auth/changePassword" class="text-sm text-gray-600 hover:text-black underline">
+            <NuxtLink to="/auth/changePassword" class="text-sm">
               Forgot password?
             </NuxtLink>
           </div>
@@ -61,31 +61,31 @@
         </form>
 
         <div class="text-center mt-8 space-y-2">
-          <div class="text-sm sm:text-md text-gray-600">
+          <div class="text-sm sm:text-md">
             Don't have an account?
-            <NuxtLink to="/auth/register" class="underline hover:text-black">Register</NuxtLink>
+            <NuxtLink to="/auth/register" class="underline text-[#dec8ab]">Register</NuxtLink>
           </div>
           <div class="text-sm text-gray-600">
-            Enter as <NuxtLink to="/" class="underline hover:text-black">Visitor</NuxtLink>
+            Enter as <NuxtLink to="/" class="underline text-[#dec8ab]">Visitor</NuxtLink>
           </div>
         </div>
 
-        <div class="text-center text-sm sm:text-md text-gray-600 mt-32">
+        <div class="text-center text-sm sm:text-md mt-32">
           Having problems signing up?
-          <NuxtLink to="/contactUs" class="underline hover:text-black">Contact Us</NuxtLink>
+          <NuxtLink to="/contactUs" class="underline text-[#dec8ab]">Contact Us</NuxtLink>
         </div>
       </div>
     </section>
 
     <aside class="order-2 flex items-end justify-center md:items-center bg-transparent px-5 pb-6 md:pb-0">
-      <div class="relative w-full max-w-xl">
+      <div class="relative w-full max-w-xl ">
         <img
           src="/assets/images/auth-img.png"
           alt="Clothing rack"
           class="rounded-[28px] md:rounded-[2.5vw] object-cover w-full h-auto"
           loading="lazy"
         />
-        <a class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
+        <a href="/" class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
      
             <img
               src="/assets/images/rr.svg"

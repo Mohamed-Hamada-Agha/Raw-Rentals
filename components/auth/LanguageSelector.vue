@@ -6,9 +6,8 @@
         :options="cities"
         optionLabel="code"
         placeholder="English"
-        dir="rtl"
-        class="w-40 md:w-56 bg-white rounded-lg"
-        panelClass="custom-lang-panel"
+        class=" w-40 md:w-56  text-lg bg-white rounded-lg border border-gray-200"
+        panelClass="custom-lang-panel "
       />
     </InputGroup>
   </div>
@@ -25,13 +24,13 @@ const cities = ref([
 ])
 </script>
 
-<style>
-.custom-lang-panel {
-  width: 150px !important;        
-  background: #fff !important;    
-  border-radius: 0.5rem !important; 
+<style scoped>
+:global(.custom-lang-panel) {
+  width: 180px ;        
+  background-color: white !important;
+  border-radius: 20px ; 
   z-index: 9999 !important;
   padding: 10px;
-  margin: 8px;
+  margin: 2px;
 }
 </style>

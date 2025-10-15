@@ -121,7 +121,7 @@
           <div class="flex items-center gap-2 text-sm">
             <input id="terms" v-model="accepted" type="checkbox" class="h-4 w-4 rounded border-gray-300" />
             <label for="terms" class="text-gray-700">Accept</label>
-            <NuxtLink to="/terms" class="text-[#c5b29a] underline">Terms and Conditions</NuxtLink>
+            <NuxtLink to="/terms-Conditions" class="text-[#c5b29a] underline text-md">Terms and Conditions</NuxtLink>
           </div>
           <p v-if="errors.accepted" class="mt-1 text-xs text-red-600">{{ errors.accepted }}</p>
 
@@ -156,7 +156,7 @@
           class="rounded-[28px] md:rounded-[2.5vw] object-cover w-full h-auto"
           loading="lazy"
         />
-        <a class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
+        <a href="/" class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
      
             <img
               src="/assets/images/rr.svg"

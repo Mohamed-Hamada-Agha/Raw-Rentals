@@ -1,4 +1,3 @@
-// nuxt.config.ts
 import Aura from '@primeuix/themes/aura'
 
 export default defineNuxtConfig({
@@ -6,9 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   typescript: { shim: false, strict: true },
-
   vite: { esbuild: { jsx: 'automatic' } },
-
   components: true,
 
   modules: [
@@ -24,24 +21,22 @@ export default defineNuxtConfig({
       ripple: true,
       inputVariant: 'filled',
     },
-    // 👇 هنا المكان الصحيح للثيم
     theme: {
       preset: Aura,
       options: {
         prefix: 'p',
-        darkModeSelector: 'system',
+        darkModeSelector: 'system', // لو بتستخدم 'class' للوضع الليلي، غيّرها لاحقًا لـ 'class'
         cssLayer: true,
       },
     },
   },
 
-  // Tailwind inline config (تمام)
+  // ملاحظة: لو عندك tailwind.config.js مستقل، خليك بمكان واحد تفضلًا
   tailwindcss: {
     config: {
       theme: {
         extend: {
           fontFamily: {
-            // حط الخط أولًا وباقي الاحتياطي بعده + اقتباس الاسم
             sans: ['"JF Flat"', 'Cairo', 'Inter', 'system-ui', 'sans-serif'],
           },
         },
@@ -49,10 +44,11 @@ export default defineNuxtConfig({
     },
   },
 
+  // يفضّل تحميل الخطوط قبل باقي الستايلات، ثم Tailwind، ثم style.css
   css: [
-    'primeicons/primeicons.css',   // أيقونات Prime
-    '@/assets/css/tailwind.css',   // ملفك اللي فيه @tailwind base/components/utilities
-    '~/assets/css/fonts.css',      // @font-face لـ JF Flat
-    '~/assets/css/style.css',      // ستايلاتك (اتأكد ما تغيّرش ألوان Prime عموميًا)
+    '~/assets/css/fonts.css',
+    'primeicons/primeicons.css',
+    '@/assets/css/tailwind.css',
+    '~/assets/css/style.css',
   ],
 })

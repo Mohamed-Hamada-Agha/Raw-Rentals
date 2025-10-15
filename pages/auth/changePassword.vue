@@ -27,7 +27,7 @@
         <!-- contact -->
         <div class="text-center text-md text-gray-600 mt-24">
           Having problems signing up?
-          <NuxtLink to="/contactUs" class="underline hover:text-black">Contact Us</NuxtLink>
+          <NuxtLink to="/contactUs" class="underline text-[#dec8ab]">Contact Us</NuxtLink>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
           class="rounded-[28px] md:rounded-[2.5vw] object-cover w-full h-auto"
           loading="lazy"
         />
-        <a class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
+        <a href="/" class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
      
             <img
               src="/assets/images/rr.svg"

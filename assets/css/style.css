@@ -3,6 +3,17 @@
 *::before,
 *::after { box-sizing: border-box; }
 
+.custom-lang-panel {
+  width: 180px;
+  background: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,.08);
+  padding: 10px;
+  margin: 2px;
+  z-index: 9999;
+}
+
 :root{
   --font-sans: "JF Flat", system-ui, -apple-system, "Segoe UI", Roboto,
                "Helvetica Neue", Arial, "Noto Sans Arabic", "Noto Sans", sans-serif;

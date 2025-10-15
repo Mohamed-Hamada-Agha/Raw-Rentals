@@ -25,7 +25,7 @@
         <div class="pr-16 py-2 ml-2">
             <h2 class=" font-semibold text-lg my-2">Rent dresses</h2>
             <p class=" text-black/50">A service that allows customers to rent the perfect dresses for 
-              all their occasions, whether weddings, evening 
+              all their occasions, whether weddings, evening allows customers to rent the perfect
             </p>
         </div>
         <WhatsappButton />

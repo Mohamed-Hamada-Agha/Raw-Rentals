@@ -1,6 +1,6 @@
 <template>
    <div class="h-[50px] flex justify-between bg-[#dec8ab]">
-    <!-- Icons-sochial Links -->
+    <!-- Icons-sochial-Links -->
      <Icons-Links />
     <div class="upperbar flex justify-end items-center gap-10 mr-28  ">
     <a href="" class="links flex items-center gap-2 text-lg">
@@ -29,4 +29,5 @@
 .upperbar .links {
     gap: 5px;
 }
+
 </style>

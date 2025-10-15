@@ -1,7 +1,7 @@
 <template>
   <div class="w-full bg-slate-100">
-    <h1 class="text-2xl p-8 text-center ">contact Us</h1>
-  <form class="bg-white grid grid-cols-2 gap-6 rounded-lg mx-28 border mb-8 border-[#d2b895] p-6">
+    <h1 class="text-2xl p-8 font-semibold text-center ">contact Us</h1>
+  <form class="bg-white grid grid-cols-2 gap-6 rounded-lg mx-24 border mb-8 border-[#d2b895] p-6">
     <div class="flex flex-col gap-4">
       <div>
         <label class="block mb-1 text-lg">Name</label>
