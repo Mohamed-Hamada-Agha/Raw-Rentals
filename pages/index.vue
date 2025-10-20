@@ -1,12 +1,9 @@
 <template>
   <div class="flex flex-col  min-h-screen">  
-    
-
-
   <OccasionCarousel />
   <!-- فساتين للمناسبات -->
    <div class="mx-28">
-     <div class="mx-28 p-4 m-4">
+    <div class="mx-28 p-4 m-4">
      
       <h1 class="text-center text-3xl font-extrabold mr-8">Dress for Occasion</h1>
       <div class="grid grid-cols-5 p-4 m-4">  
@@ -85,7 +82,7 @@
     </div>
     </div>
     <!-- يمكنك التواصل معنا عبر -->
-     <div class="border border-[#dec8ab] bg-[#fcf9f6] rounded-lg m-4">
+    <div class="border border-[#dec8ab] bg-[#fcf9f6] rounded-lg m-4">
       <h1 class="text-3xl font-semibold text-center p-4">You can reach us via</h1>
     <div class="flex flex-wrap justify-center items-center p-4  ">
         <ul class="flex space-x-3"> 
@@ -117,7 +114,7 @@
             </li>
         </ul>
     </div>
-     </div>
+    </div>
     <!-- العروض -->
     <div class="p-4">
       <div class="flex justify-between items-center ">
@@ -253,8 +250,6 @@
 import { ref } from "vue"
 import OccasionCarousel from '~/components/layout/OccasionCarousel.vue';
 import Services from '~/components/layout/Services.vue';
-
-
 </script>
 
 <style>

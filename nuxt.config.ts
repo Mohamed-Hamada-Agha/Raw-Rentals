@@ -6,49 +6,56 @@ export default defineNuxtConfig({
 
   typescript: { shim: false, strict: true },
   vite: { esbuild: { jsx: 'automatic' } },
-  components: true,
 
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/icon',
-    '@nuxtjs/i18n',
     '@primevue/nuxt-module',
+    '@nuxtjs/i18n',
   ],
 
+  // i18n: استخدم "files" مع langDir (تحميل كسول)
+  i18n: {
+    locales: [
+      { code: 'ar', iso: 'ar-SA', name: 'العربية', file: 'ar.json', dir: 'rtl' },
+      { code: 'en', iso: 'en-US', name: 'English',  file: 'en.json', dir: 'ltr' }
+    ],
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    langDir: 'locales',
+    vueI18n: './i18n.config.ts',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
+  },
+
+  // PrimeVue v4 — الثيم عبر JS preset (متوافق وبدون CSS إضافي)
   primevue: {
-    components: { include: ['Carousel'] },
+    components: { 
+      // ضيف اللي محتاجه فقط؛ InputGroup من @primevue/forms هيشتغل
+      include: ['Select', 'InputGroup', 'Carousel']
+    },
     options: {
       ripple: true,
       inputVariant: 'filled',
-    },
-    theme: {
-      preset: Aura,
-      options: {
-        prefix: 'p',
-        darkModeSelector: 'system', // لو بتستخدم 'class' للوضع الليلي، غيّرها لاحقًا لـ 'class'
-        cssLayer: true,
-      },
-    },
-  },
-
-  // ملاحظة: لو عندك tailwind.config.js مستقل، خليك بمكان واحد تفضلًا
-  tailwindcss: {
-    config: {
       theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"JF Flat"', 'Cairo', 'Inter', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    },
+        preset: Aura,
+        options: {
+          prefix: 'p',
+          darkModeSelector: 'class', // سيب الثيم يتبع نظام الجهاز
+          cssLayer: true              // يحط الـ CSS في layer، أحسن مع Tailwind
+        }
+      }
+    }
   },
 
-  // يفضّل تحميل الخطوط قبل باقي الستايلات، ثم Tailwind، ثم style.css
+  // ترتيب الـ CSS: Tailwind أولًا (reset/utilities) ثم الأيقونات ثم ملفاتك
   css: [
-    '~/assets/css/fonts.css',
-    'primeicons/primeicons.css',
     '@/assets/css/tailwind.css',
-    '~/assets/css/style.css',
-  ],
+    'primeicons/primeicons.css',
+    '~/assets/css/fonts.css',
+    '~/assets/css/style.css'
+  ]
 })

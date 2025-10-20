@@ -14,7 +14,7 @@
             v-model="selected"
             :options="countries"
             optionLabel="name"
-            class="p-2"
+            class=" bg-transparent"
           >
           <template #value="{ value }">
             <div v-if="value" class="flex items-center justify-center gap-2">
@@ -22,12 +22,11 @@
               <span class="text-sm">{{ value.dial }}</span>
             </div>
             <div v-else class="flex items-center justify-center gap-2">
-              <!-- <img src="https://flagcdn.com/w40/sa.png" class="w-6 h-4 rounded-sm border" alt="" /> -->
               <span class="text-black">+966</span>
             </div>
           </template>
           <template #option="{ option }">
-            <div class="flex items-center gap-2 justify-start py-1 pr-8 mr-12">
+            <div class="flex items-center gap-2 justify-start py-1">
               <img :src="option.flag" class="w-6 h-4 rounded-sm border" alt="" />
               <span class="text-sm text-black">{{ option.name }}</span>
               <span class="text-xs text-black">({{ option.dial }})</span>

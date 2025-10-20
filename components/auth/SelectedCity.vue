@@ -2,7 +2,8 @@
     <div class="mb-6 ">
       <label for="mobile" class="block text-md font-semibold text-black pb-2">City</label>
   <div class="relative flex items-center selectparent border border-gray-200 rounded-lg">
-    <Select v-model="selectedCity" :options="cities" optionLabel="name" class="w-full p-3" />
+    <Select v-model="selectedCity" :options="cities" optionLabel="name" placeholder="selected city"
+     class="w-full p-1 bg-transparent text-black/50" />
   </div>
     </div>
 </template>

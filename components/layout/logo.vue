@@ -36,7 +36,7 @@ import SuccessDialog from '../auth/SuccessDialog.vue';
 const showSuccessDialog = ref(false);
 
 const openDialog = () => {
-    showSuccessDialog.value = true
+    showSuccessDialog.value = true  
 }
 import { useRouter } from 'vue-router'
 
@@ -84,7 +84,8 @@ const categories = ref([
 :deep(.p-menuitem-content:focus-within .menu-item::after) {
   transform: scaleX(1);    
 }
-/* .navbar .content .nav-links .nav-link.router-link-active:after, .menu-item::after {
+.navbar .content .nav-links .nav-link.router-link-active:after,
+.menu-item::after {
     width: 100%;
-} */
+}
 </style>

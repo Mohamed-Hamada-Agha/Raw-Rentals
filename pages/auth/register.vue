@@ -46,7 +46,6 @@
 
           <!-- City -->
           <div>
-            <!-- <label class="block text-sm font-semibold mb-2 text-black">City</label> -->
             <SelectedCity v-model="city" />
             <p v-if="errors.city" class="mt-1 text-xs text-red-600">{{ errors.city }}</p>
           </div>
@@ -54,7 +53,7 @@
           <!-- New Password -->
           <div>
             <label for="password" class="block text-sm font-semibold mb-2 text-black">New Password</label>
-            <div class="relative flex items-center rounded-lg border border-gray-300 focus-within:border-gray-900 transition">
+            <div class="relative flex items-center rounded-lg border border-gray-200">
               <input
                 id="password"
                 v-model="password"
@@ -87,7 +86,7 @@
           <!-- Confirm Password -->
           <div>
             <label for="confirm" class="block text-sm font-semibold mb-2 text-black">Confirm Password</label>
-            <div class="relative flex items-center rounded-lg border border-gray-300 focus-within:border-gray-900 transition">
+            <div class="relative flex items-center rounded-lg border border-gray-300">
               <input
                 id="confirm"
                 v-model="confirm"

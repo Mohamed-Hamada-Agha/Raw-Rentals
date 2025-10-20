@@ -2,7 +2,7 @@
    <div class="h-[50px] flex justify-between bg-[#dec8ab]">
     <!-- Icons-sochial-Links -->
      <Icons-Links />
-    <div class="upperbar flex justify-end items-center gap-10 mr-28  ">
+    <div class="upperbar flex justify-end items-center gap-10 mr-24  ">
     <a href="" class="links flex items-center gap-2 text-lg">
         <span><NuxtLink to="/cart">Cart</NuxtLink></span>
         <i class="pi pi-shopping-bag"></i>
@@ -26,8 +26,7 @@
 </script>
 
 <style>
-.upperbar .links {
+/* .upperbar .links {
     gap: 5px;
-}
-
+} */
 </style>
