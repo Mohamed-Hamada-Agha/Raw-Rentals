@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row justify-between items-center bg-white gap-20 text-lg mx-28">
       <ul class="flex justify-start items-center flex-row flex-nowrap gap-12 ">
-        <li class="menu-item active:"><NuxtLink to="/">Home</NuxtLink></li>
+        <li class="menu-item active "><NuxtLink to="/">Home</NuxtLink></li>
         <li>
         <Menue
           :label="'Menue'"
@@ -69,19 +69,10 @@ const categories = ref([
   transform-origin: left center; 
   transition: transform .25s ease;
 }
-/* .navbar .content .nav-links .nav-link:after {
-    background-color: #dec8ab;
-    border-radius: 10px;
-    bottom: -10px;
-    content: "";
-    height: 4px;
-    inset-inline-start: 0;
-    position: absolute;
-    transition: all .3s ease-in-out;
-    width: 0;
-} */
+  
 :deep(.menu-item:hover::after),
-:deep(.p-menuitem-content:focus-within .menu-item::after) {
+:deep(.menu-item:focus-within::after),
+:deep(.menu-item:active::after) {
   transform: scaleX(1);    
 }
 .navbar .content .nav-links .nav-link.router-link-active:after,

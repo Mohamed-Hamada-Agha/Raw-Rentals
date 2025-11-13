@@ -33,7 +33,7 @@
     </table>
   </div>
   <div class="flex justify-end mx-8">
-      <img src="/assets/images/pagination.png" alt="pagination">
+      <!-- <img src="/assets/images/pagination.png" alt="pagination"> -->
     </div>
   </div>
 </template>
