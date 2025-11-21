@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-[105vh] grid grid-cols-1 md:grid-cols-2 font-sans">
-    <section class="order-1 flex items-center justify-center px-5 pt-32">
-      <div class="w-full max-w-2xl ml-24">
+    <section class="order-1 flex items-center justify-center px-5 pt-10 md:pt-32">
+      <div class="w-full max-w-2xl ml-0 md:ml-24">
         <h1 class="text-3xl sm:text-4xl text-center font-semibold mb-8 text-black">Login</h1>
 
         <form @submit.prevent="handleLogin" class="space-y-6">
@@ -78,7 +78,7 @@
     </section>
 
     <aside class="order-2 flex items-end justify-center md:items-center bg-transparent px-5 pb-6 md:pb-0">
-      <div class="relative w-full max-w-xl ">
+      <div class="relative w-full max-w-xl">
         <img
           src="/assets/images/auth-img.png"
           alt="Clothing rack"
@@ -86,7 +86,6 @@
           loading="lazy"
         />
         <a href="/" class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
-     
             <img
               src="/assets/images/rr.svg"
               alt="Brand logo"
@@ -97,6 +96,7 @@
     </aside>
   </div>
 </template>
+
 
 <script setup>
 import { ref } from 'vue'

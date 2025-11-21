@@ -1,5 +1,4 @@
 <template>
-  <!-- سكرول بسيط -->
   <div class="min-h-[105vh] grid grid-cols-1 md:grid-cols-2 font-sans">
     <!-- فورم التسجيل -->
     <section class="order-1 flex items-center justify-center px-5 py-10 md:px-10">
@@ -156,7 +155,6 @@
           loading="lazy"
         />
         <a href="/" class="bg-white rounded-tl-[2.6vw] bottom-0 right-0 pt-[5%] pl-[5%] absolute w-1/4">
-     
             <img
               src="/assets/images/rr.svg"
               alt="Brand logo"
@@ -167,6 +165,7 @@
     </aside>
   </div>
 </template>
+
 
 <script setup>
 import { ref } from 'vue'

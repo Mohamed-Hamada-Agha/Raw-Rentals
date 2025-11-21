@@ -1,7 +1,7 @@
 <template>
      <div class="bg-white mx-10">
         <div class="m-2 p-2">
-            <img src="/assets/images/Ellipse 6.png" alt="" class=" object-contain w-[100px] h-[100px]">
+            <img src="/assets/images/6.png" alt="" class=" object-contain w-[100px] h-[100px]">
         </div>
         <div class="grid grid-cols-2 m-2">
            <div class="p-2 m-2">

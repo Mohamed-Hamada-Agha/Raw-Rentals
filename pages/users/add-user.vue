@@ -3,7 +3,7 @@
      <h2 class="text-2xl p-4 my-4  ">إضافة مستخدم</h2>
      <div class="bg-white p-2 m-4">
         <h2 class="  text-lg">بيانات المستخدم</h2>
-        <img src="/assets/images/Ellipse 6.png" alt="صورة المستخدم" class="w-[120px] h-[120px] object-contain ml-8">
+        <img src="/assets/images/6.png" alt="صورة المستخدم" class="w-[120px] h-[120px] object-contain ml-8">
         <div class="p-2">
         <p class="text-lg">الجوال</p>
         <input type="text" placeholder="أدخل رقم الجوال"  class="p-3 border border-black w-[360px] rounded-md mb-2 bg-white">
